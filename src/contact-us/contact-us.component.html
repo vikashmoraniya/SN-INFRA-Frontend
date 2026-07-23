@@ -1,0 +1,82 @@
+<section class="contact-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Get in touch with SNINFRA for your construction needs.</p>
+  </div>
+</section>
+
+<section class="contact-section section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-form-container">
+          <h2>How can I help you?</h2>
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" formControlName="fullName" placeholder="Your Full Name">
+              <div *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched" class="error-message">
+                Full Name is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" formControlName="email" placeholder="Your Email Address">
+              <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
+                <span *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</span>
+                <span *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email address.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" formControlName="address" placeholder="Your Address">
+              <div *ngIf="contactForm.get('address')?.invalid && contactForm.get('address')?.touched" class="error-message">
+                Address is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="mobileNumber">Mobile Number</label>
+              <input type="tel" id="mobileNumber" formControlName="mobileNumber" placeholder="Your Mobile Number">
+              <div *ngIf="contactForm.get('mobileNumber')?.invalid && contactForm.get('mobileNumber')?.touched" class="error-message">
+                <span *ngIf="contactForm.get('mobileNumber')?.errors?.['required']">Mobile Number is required.</span>
+                <span *ngIf="contactForm.get('mobileNumber')?.errors?.['pattern']">Please enter a valid mobile number.</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" formControlName="message" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+              Send Message
+            </button>
+            <div *ngIf="isSuccess" class="success-message">Your message has been sent successfully!</div>
+
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-info-container">
+          <h2>Our Contact Information</h2>
+          <p><i class="fas fa-user"></i> Engineer Name : Navdeep Punasiya</p>
+          <p><i class="fas fa-map-marker-alt"></i> Company Address: 507, Oman plaza, AB-Road Indore, MP, India</p>
+          <p>
+          <i class="fas fa-envelope"></i> 
+            Email: <a href="navdeeppunasiya@gmail.com">sninfra&#64;gmail.com</a>
+          </p>
+          <p><i class="fas fa-phone"></i> Phone Number: +91 9617095585</p>
+          <p><i class="fas fa-clock"></i> Office Hours: Mon - Sat : 9 AM - 5 PM</p>
+
+          <div class="social-media-contact">
+            <a href="https://wa.me/919617095585" target="_blank" class="whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank" class="instagram-btn">
+              <i class="fab fa-instagram"></i> Follow on Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>

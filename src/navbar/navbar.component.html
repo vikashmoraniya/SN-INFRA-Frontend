@@ -1,0 +1,29 @@
+<nav [class.sticky]="isSticky" class="navbar">
+  <div class="navbar-container">
+    <a routerLink="/" class="navbar-logo">
+    <img src="assets/images/logo.png" alt="SNINFRA Logo" class="logo-img">
+    </a>
+
+    <div class="menu-icon" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <ul [class.active]="isMenuOpen" class="nav-menu">
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-links" (click)="toggleMenu()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about-us" routerLinkActive="active" class="nav-links" (click)="toggleMenu()">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/services" routerLinkActive="active" class="nav-links" (click)="toggleMenu()">Services</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/projects" routerLinkActive="active" class="nav-links" (click)="toggleMenu()">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/contact-us" routerLinkActive="active" class="nav-links" (click)="toggleMenu()">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>

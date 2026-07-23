@@ -1,0 +1,126 @@
+.projects-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/images/projects/housing-colony.webp") no-repeat center center/cover;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.projects-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.projects-hero p {
+  font-size: 1.3rem;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.projects-filter {
+  text-align: center;
+}
+
+.filter-buttons {
+  margin-bottom: 40px;
+}
+
+.btn-filter {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.project-location,
+.project-category,
+.project-date {
+  font-size: 0.9rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.no-projects-message {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2rem;
+  color: #777;
+}
